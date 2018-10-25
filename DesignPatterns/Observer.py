@@ -1,3 +1,4 @@
+""" ref. https://www.tutorialspoint.com/python_design_patterns/python_design_patterns_observer.htm """
 import threading
 import time
 import pdb
