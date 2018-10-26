@@ -1,3 +1,4 @@
+""" ref. https://www.tutorialspoint.com/python_design_patterns/python_design_patterns_observer.htm """
 import threading
 import time
 import pdb
@@ -8,18 +9,18 @@ class Downloader(threading.Thread):
         for i in range(1, 5):
             self.i = i
             time.sleep(2)
-            print('unfunf')
+            print("unfunf")
 
-            return 'hello world'
+            return "hello world"
 
 class Worker(threading.Thread):
     def run(self):
         for i in range(1, 5):
-            print('worker running: %i (%i)' % (i, t.i))
+            print("worker running: %i (%i)" % (i, t.i))
             time.sleep(1)
             t.join()
 
-            print('done')
+            print("done")
 
 t = Downloader()
 t.start()
